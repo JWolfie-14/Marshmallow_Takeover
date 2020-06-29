@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8120563453949720818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.25, y: -0.98, z: 0}
-  m_LocalScale: {x: 0.23108676, y: 0.23108676, z: 0.23108676}
+  m_LocalScale: {x: 1.1783, y: 1.1783, z: 1.1783}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 563180a4d4c9d954ba03049feedf91b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d864ed0f3e4c954cad94c367ed1ea41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,9 +95,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23797011, y: -0.2549684}
+  m_Offset: {x: -0.04, y: -0.05}
   serializedVersion: 2
-  m_Radius: 0.9950323
+  m_Radius: 0.19
 --- !u!50 &6671317481575175064
 Rigidbody2D:
   serializedVersion: 4
@@ -134,4 +134,5 @@ MonoBehaviour:
   gooBombSpeed: 9
   xTrajectory: 1.5
   yTrajectory: 1
-  gooDamage: 0
+  bombExplosionVFX: {fileID: 9074906207933288678, guid: 50c1005e53b77ba4ab7f52a7ac154943,
+    type: 3}

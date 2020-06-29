@@ -8,7 +8,7 @@ public class GooBombScript_Player1 : MonoBehaviour
     private Rigidbody2D rb;
     public float xTrajectory, yTrajectory;
 
-    private Collider2D[] explosionArea;
+    public GameObject bombExplosionVFX;
     public int gooDamage;
     
     void Start()
@@ -29,15 +29,6 @@ public class GooBombScript_Player1 : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other) 
     {
-        // if (other.gameObject.name == "Stewie_Player1")
-        // {
-        //     Debug.Log("Hit own player");
-        // }
-        // if (other.gameObject.name == "Gooey_Player2")
-        // {
-        //     GameManagement.player2Health = GameManagement.player2Health - gooDamage;
-
-        // }
         if (other.gameObject.CompareTag("GooWaveProtector"))
         {
             Debug.Log("hit Protector");
@@ -46,17 +37,7 @@ public class GooBombScript_Player1 : MonoBehaviour
         if (other.tag != ("GooWaveProtector"))
         {
             Destroy(gameObject);
+            Instantiate(bombExplosionVFX, transform.position, transform.rotation);
         }   
     }
-
-    // void Explosion(Vector2 centre, float radius)
-    // {
-    //     Collider2D[] explosionArea = Physics2D.OverlapCircle(centre, radius);
-    //     int i = 0;
-    //     while (i < explosionArea.Length)
-    //     {
-    //         explosionArea[i].SendMessage("AddDamage");
-    //         i++;
-    //     }
-    // }
 }

@@ -13,6 +13,12 @@ public class SpecialAbilitySpawn : MonoBehaviour
  List<Transform> locationList;
  public static bool abilityPickedUp = false;
  public static bool abilityDestroyed = false;
+ public GameObject rapidFireCounterUIP1;
+ public GameObject waveGooCounterUIP1;
+ public GameObject gooBombCounterUIP1;
+ public GameObject rapidFireCounterUIP2;
+ public GameObject waveGooCounterUIP2;
+ public GameObject gooBombCounterUIP2;
 
 
  private Transform spawnPoint1;
@@ -77,8 +83,8 @@ void Start()
                 //     }
                 //Instantiate(abilityIcon, spawnPoint1.position, spawnPoint1.rotation);
                 //Instantiate(abilityIcon, spawnPoint2.position, spawnPoint2.rotation);
-                specialAbilityActive = Instantiate(specialAbility3, spawnPoint1.position, spawnPoint1.rotation);
-                //specialAbilityActive.gameObject.name = "SpecialAbilityActive";
+                specialAbilityActive = Instantiate(abilityIcon, spawnPoint1.position, spawnPoint1.rotation);
+                specialAbilityActive.gameObject.name = "SpecialAbilityActive";
                 
                 //Instantiate(specialAbility3, spawnPoint2.position, spawnPoint2.rotation);
                 
@@ -103,8 +109,20 @@ void Start()
             {
                 Debug.Log("reaches if in specialy ability spawn script");
                 Destroy(specialAbilityActive);
+                DeactivateAmmoCounterUI();
+
             }
         
+    }
+
+    void DeactivateAmmoCounterUI()
+    {
+        gooBombCounterUIP1.SetActive(false);
+        waveGooCounterUIP1.SetActive(false);
+        rapidFireCounterUIP1.SetActive(false);
+        gooBombCounterUIP2.SetActive(false);
+        waveGooCounterUIP2.SetActive(false);
+        rapidFireCounterUIP2.SetActive(false);
     }
 
  

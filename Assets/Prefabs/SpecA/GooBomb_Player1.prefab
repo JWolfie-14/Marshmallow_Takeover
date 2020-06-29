@@ -134,4 +134,6 @@ MonoBehaviour:
   gooBombSpeed: 9
   xTrajectory: 1.5
   yTrajectory: 1
+  bombExplosionVFX: {fileID: 9074906207933288678, guid: caac9c1d1caa4b648941c3305d73365c,
+    type: 3}
   gooDamage: 0
