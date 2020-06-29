@@ -9010,7 +9010,7 @@ GameObject:
   - component: {fileID: 778866697}
   - component: {fileID: 778866696}
   m_Layer: 0
-  m_Name: Goo_Bomb_Explosion
+  m_Name: Goo_Bomb_Explosions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
